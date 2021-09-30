@@ -22,3 +22,17 @@ function padIt(str,n){
   } while (i <= n)
   return str;
 }
+
+//http://www.codewars.com/kata/5721c189cdd71194c1000b9b
+
+function grabDoll(dolls){
+  let bag=[], world = ['Hello Kitty','Barbie doll'];
+    for (let i of dolls) {
+      if (! world.includes(i))
+        continue;
+      bag.push(i);
+      if (bag.length === 3)
+        break;
+    }
+  return bag;
+}
