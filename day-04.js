@@ -10,3 +10,15 @@ function pickIt(arr){
   
   return [odd,even];
 }
+
+
+// http://www.codewars.com/kata/57216d4bcdd71175d6000560
+
+function padIt(str,n){
+  let i = 1;
+  do {
+    i % 2 === 1 ? str = '*' + str : str += '*';
+    i++;
+  } while (i <= n)
+  return str;
+}
