@@ -34,7 +34,7 @@ function whatNumberIsIt(n){
  
 //  http://www.codewars.com/kata/57256064856584bc47000611  
 function howManySmaller(arr,n){
-  let countElement = 0
+  let countElement = 0;
   for (let i of arr) {
     i = +i.toFixed(2);
     if (i < n) {
