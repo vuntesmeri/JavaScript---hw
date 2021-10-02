@@ -1,0 +1,51 @@
+//http://www.codewars.com/kata/5728203b7fc662a4c4000ef3
+
+function alienLanguage(str) {
+  let strInList = str.split(' ');
+  let alias = strInList.map(
+    (val) =>
+      val.slice(0, -1).toUpperCase() +
+      val.slice( -1).toLowerCase()
+  );
+  return alias.join(" ");
+}
+
+//http://www.codewars.com/kata/57284d23e81185ae6200162a
+
+function topSecret(str) {
+  let strToArr = str.split('');
+  for (let i = 0; i < strToArr.length; i++) {
+    let LetterToUnicod = strToArr[i].charCodeAt();
+    switch (true) {
+      case LetterToUnicod < 68 && LetterToUnicod > 64:
+      case LetterToUnicod < 100 && LetterToUnicod > 96:
+        strToArr[i] = String.fromCharCode(LetterToUnicod + 23);
+        break;
+      case LetterToUnicod < 91 && LetterToUnicod > 67:
+      case LetterToUnicod <= 123 && LetterToUnicod > 99:
+        strToArr[i] = String.fromCharCode(LetterToUnicod - 3);
+        break;
+      default:
+        strToArr[i] = strToArr[i];
+    }
+  }
+  return strToArr.join('');
+  // metr.join('').join(' ')
+}
+//question1: The top secret file number is...
+answer1="2510";
+//question2: Super agent's name is...
+answer2="JiY";
+//question3: He stole the treasure is...
+answer3="Toilet paper";
+
+
+//http://www.codewars.com/kata/5729b103dd8bac11a900119e
+
+function fiveLine(s) {
+  s = s.trim();
+  let poem = '';
+  for (let i = 0; i < 5; i++) {
+    console.log((poem += `${s}`));
+  }
+}
