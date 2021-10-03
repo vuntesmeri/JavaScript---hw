@@ -1,0 +1,31 @@
+//https://www.codewars.com/kata/playing-with-sets-equal-or-not/train/javascript
+
+function areEqual(s1, s2) {
+  if (s1.size !== s2.size) {
+    return false;
+  }
+  for (const val of s2) {
+    if (!s1.has(val)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function notEqual(s1, s2){
+  return !areEqual(s1,s2);
+}
+
+// https://www.codewars.com/kata/5609fd5b44e602b2ff00003a/train/javascript
+
+function process2Arrays(arr1, arr2) {
+  const bothArr = arr1.concat(arr2);
+  const bothArrSet = new Set(bothArr);
+  const intersecting = bothArr.length - bothArrSet.size;
+  const non_intersecting = bothArrSet.size - intersecting;
+  const elemInArr1 = bothArrSet.size - arr2.length;
+  const elemInArr2 = bothArrSet.size - arr1.length;
+
+  return [intersecting, non_intersecting, elemInArr1, elemInArr2];
+};
+
