@@ -1,7 +1,19 @@
+// https://www.codewars.com/kata/59859f435f5d18ede7000050
+
 function wordToBin(str) {
-  const array = [];
-  for (const val of str) {
-    array.push(val.charCodeAt().toString(2).padStart(8, '0'));
-  }
+  const array = str.split('').map(val => val.charCodeAt().toString(2).padStart(8, '0'));
   return array;
 }
+
+// https://www.codewars.com/kata/57f75cc397d62fc93d000059
+
+function calc(x) {
+  let total1 = x.split('').map((val) => val.charCodeAt());
+  total1 = total1.join('');
+    const total2 = total1.replace(new RegExp('7', 'g'), '1');
+
+  const diff =
+    total1.split('').reduce((x, y) => Number(x) + Number(y)) -
+    total2.split('').reduce((x, y) => Number(x) + Number(y));
+  return diff;
+};
