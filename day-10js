@@ -15,22 +15,21 @@ function alienLanguage(str) {
 function topSecret(str) {
   let strToArr = str.split('');
   for (let i = 0; i < strToArr.length; i++) {
-    let LetterToUnicod = strToArr[i].charCodeAt();
+    let letterToUnicod = strToArr[i].charCodeAt();
     switch (true) {
-      case LetterToUnicod < 68 && LetterToUnicod > 64:
-      case LetterToUnicod < 100 && LetterToUnicod > 96:
-        strToArr[i] = String.fromCharCode(LetterToUnicod + 23);
+      case letterToUnicod < 68 && letterToUnicod > 64:
+      case letterToUnicod < 100 && letterToUnicod > 96:
+        strToArr[i] = String.fromCharCode(letterToUnicod + 23);
         break;
-      case LetterToUnicod < 91 && LetterToUnicod > 67:
-      case LetterToUnicod <= 123 && LetterToUnicod > 99:
-        strToArr[i] = String.fromCharCode(LetterToUnicod - 3);
+      case letterToUnicod < 91 && letterToUnicod > 67:
+      case letterToUnicod <= 123 && letterToUnicod > 99:
+        strToArr[i] = String.fromCharCode(letterToUnicod - 3);
         break;
       default:
-        strToArr[i] = strToArr[i];
+        continue;
     }
   }
   return strToArr.join('');
-  // metr.join('').join(' ')
 }
 //question1: The top secret file number is...
 answer1="2510";
@@ -40,12 +39,15 @@ answer2="JiY";
 answer3="Toilet paper";
 
 
-//http://www.codewars.com/kata/5729b103dd8bac11a900119e
-
+//http://www.codewars.com/kata/5729b103dd8bac11a900119e 
+// reworked assignment 3
 function fiveLine(s) {
-  s = s.trim();
-  let poem = '';
-  for (let i = 0; i < 5; i++) {
-    console.log((poem += `${s}`));
+  ss = s.trim();
+  let poem = ss;
+  let line = ss;
+  for (let i = 1; i < 5; i++) {
+    line += `${ss}`;
+  poem += '\n' + line;
   }
+  return poem;
 }
