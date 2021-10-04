@@ -12,3 +12,20 @@ function match(candidate, job) {
   }
   return false;  
 };
+
+//https://www.codewars.com/kata/56c2578be8b139bd5c001bd8
+
+function match(job, candidates) {
+  let check = [];
+  for (let person of candidates) {
+    let candidateLocation = (person['currentLocation'] + ',' + person['desiredLocations']).split(',');
+    let location = job['locations'].some((city) => candidateLocation.includes(city));
+    let equitys =
+      person['desiresEquity'] === true && job['equityMax'] > 0 ||
+      person['desiresEquity'] === false;
+    if (location && equitys) {
+      check.push(person);
+    }
+  }
+  return check;
+}
