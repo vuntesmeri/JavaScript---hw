@@ -1,0 +1,14 @@
+//https://www.codewars.com/kata/56c22c5ae8b139416c00175d/
+
+function match(candidate, job) {
+  if (
+    "maxSalary" in job === false ||
+    "minSalary" in candidate === false)
+    {
+    throw new Error('error');
+  }
+  else if (job['maxSalary'] >= candidate['minSalary'] * 0.9) {
+    return true;
+  }
+  return false;  
+};
