@@ -17,10 +17,10 @@ function match(candidate, job) {
 
 function match(job, candidates) {
   let check = [];
-  for (let person of candidates) {
-    let candidateLocation = (person['currentLocation'] + ',' + person['desiredLocations']).split(',');
-    let location = job['locations'].some((city) => candidateLocation.includes(city));
-    let equitys =
+  for (const person of candidates) {
+    const candidateLocation = (person['currentLocation'] + ',' + person['desiredLocations']).split(',');
+    const location = job['locations'].some((city) => candidateLocation.includes(city));
+    const equitys =
       person['desiresEquity'] === true && job['equityMax'] > 0 ||
       person['desiresEquity'] === false;
     if (location && equitys) {
