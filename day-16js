@@ -1,0 +1,13 @@
+//http://www.codewars.com/kata/572cb264362806af46000793
+
+function threeInOne(arr) {
+  const arrCopy = [...arr];
+  const slicedArr = [];
+  for (i = 0; i < arrCopy.length / 3; ) {
+    slicedArr.push([...arrCopy.splice(i, i + 3)]);
+  }
+
+  const sumList = slicedArr.map((elem) => elem.reduce((a, b) => a + b));
+
+  return sumList;
+};
