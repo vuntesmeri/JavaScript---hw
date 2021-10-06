@@ -11,3 +11,23 @@ function threeInOne(arr) {
 
   return sumList;
 };
+
+// http://www.codewars.com/kata/572df796914b5ba27c000c90
+
+function sortIt(arr) {
+  let setArr = Array.from(new Set(arr));
+  let sortArr = [];
+  let unpackArr = [];
+  for (let i of setArr.sort((a, b) => b - a)) {
+    sortArr.push(arr.filter((val) => val === i));
+  }
+  sortArr.sort((a, b) => a.length - b.length);
+  for (let i of sortArr) {
+    for (let j of i) {
+      unpackArr.push(j);
+    }
+  }
+  return unpackArr;
+}
+
+
