@@ -1,0 +1,14 @@
+
+
+
+//http://www.codewars.com/kata/57308546bd9f0987c2000d07
+
+function mirrorImage(arr) {
+  arr.some((_, i, arr) => {
+    curr = arr[i];
+    next = arr[i + 1];
+    return curr === Number([...(next + '')].reverse().join(''));
+  });
+  return isNaN(next) ? [-1, -1] : [curr, next];
+}
+
