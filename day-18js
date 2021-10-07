@@ -1,0 +1,16 @@
+//http://www.codewars.com/kata/573156709a231dcec9000ee8
+
+function tailAndHead(arr) {
+  let sumArr = arr.reduce((str, _, i, arr) => {
+    if (i < arr.length - 1) {
+      str.push(
+        Number([...(arr[i] + '')].pop()) +
+          Number([...(arr[i + 1] + '')].shift()));
+    }
+    return str;
+  }, []);
+
+  let mult = sumArr.reduce((total, curr, _) => total * curr);
+  return mult;
+}
+
