@@ -12,3 +12,25 @@ function mirrorImage(arr) {
   return isNaN(next) ? [-1, -1] : [curr, next];
 }
 
+
+//http://www.codewars.com/kata/573023c81add650b84000429
+
+function countGrade(scores) {
+  return {
+    'S': scores.filter((x) => x === 100).length,
+    'A': scores.filter((x) => x >= 90 && x < 100).length,
+    'B': scores.filter((x) => x >= 80 && x < 90).length,
+    'C': scores.filter((x) => x >= 60 && x < 80).length,
+    'D': scores.filter((x) => x >= 0 && x < 60).length,
+    'X': scores.filter((x) => x === -1).length
+  };
+}
+
+//http://www.codewars.com/kata/5731861d05d14d6f50000626
+
+function bigToSmall(arr) {
+  return []
+    .concat(...arr)
+    .sort((a, b) => b - a)
+    .join('>');
+}
