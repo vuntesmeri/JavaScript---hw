@@ -1,0 +1,10 @@
+//http://www.codewars.com/kata/5735e39313c205fe39001173
+
+function countAnimals(animals, count) {
+  let animCount = [];
+  for (let anim of count) {
+    animCount.push((animals.match(new RegExp(anim, 'g')) || []).length);
+  }
+  return animCount;
+}
+
