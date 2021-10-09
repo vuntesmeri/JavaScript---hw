@@ -23,3 +23,21 @@ function blackAndWhite(arr) {
       : "It's a white array"
     : "It's a fake array";
 }
+
+
+//https://www.codewars.com/kata/5735956413c2054a680009ec
+
+function rndCode() {
+  let verCode = '';
+  const symbols = '~!@#$%^&*';
+  for (let i = 0; i < 2; i++) {
+    verCode += String.fromCharCode(~~((77 - 64) * Math.random() + 65));
+  }
+  for (let i = 0; i < 4; i++) {
+    verCode += ~~(10 * Math.random());
+  }
+  for (let i = 0; i < 2; i++) {
+    verCode += symbols[~~(symbols.length * Math.random())];
+  }
+  return a;
+}
