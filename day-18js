@@ -14,3 +14,12 @@ function tailAndHead(arr) {
   return mult;
 }
 
+//http://www.codewars.com/kata/5732b0351eb838d03300101d
+
+function blackAndWhite(arr) {
+  return Array.isArray(arr)
+    ? arr.some((x) => x === 5) && arr.some((x) => x === 13)
+      ? "It's a black array"
+      : "It's a white array"
+    : "It's a fake array";
+}
