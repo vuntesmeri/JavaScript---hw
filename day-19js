@@ -8,3 +8,14 @@ function countAnimals(animals, count) {
   return animCount;
 }
 
+
+//http://www.codewars.com/kata/573975d3ac3eec695b0013e0
+
+function findSimilarity(str, word) {
+  let wordMiddle = '';
+  for (let i = 0; i < word.length - 2; i++) {
+    wordMiddle += '.';
+  }
+  const likeWord = word.slice(0, 1) + wordMiddle + word.slice(-1);
+  return (str.match(new RegExp(`\\b${likeWord}\\b`, 'g')) || ['']).join(' ');
+}
