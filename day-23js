@@ -1,0 +1,9 @@
+// http://www.codewars.com/kata/unpacking-arguments
+
+function spread(fn, arr) {
+  return fn(...arr);
+}
+
+// http://www.codewars.com/kata/for-the-sake-of-argument
+
+numbers = (...arr) => arr.every((el) => typeof el === 'number');
