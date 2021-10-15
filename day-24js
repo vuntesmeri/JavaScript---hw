@@ -7,5 +7,5 @@ solution = (...arr) => arr.length != new Set(arr).size;
 
 function last(...arr) {
   const last_arr = arr[arr.length - 1];
-  return typeof last_arr != 'number' ? last_arr[last_arr.length - 1] : last_arr;
+  return last_arr[last_arr.length - 1] : last_arr;
 }
