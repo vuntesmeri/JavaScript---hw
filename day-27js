@@ -18,7 +18,7 @@ const greet_abe = function() {
 const name = 'Abe';
   return "Hello, " + name + '!';
 };
-name = 'Ben';
+const name = 'Ben';
 const greet_ben = function() {
   return "Hello, " + name + '!';
 };
