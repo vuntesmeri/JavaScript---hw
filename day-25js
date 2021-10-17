@@ -3,3 +3,13 @@
 Function.prototype.call = function (a, ...b) {
   return this.apply(a, [b]);
 };
+
+name = 'The Window';
+var alpha = {
+  name: 'My Alpha',
+  getNameFunc: function () {
+    return () => {
+      return this.name;
+    };
+  },
+};
