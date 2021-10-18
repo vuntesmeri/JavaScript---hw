@@ -3,3 +3,11 @@
 function always(n) {
   return () => n;
 }
+// https://www.codewars.com/kata/59bdbe9d46038724ca0000b9/train/javascript
+
+function solution(arr, options) {
+  const mod = options.modifier;
+  const arr_mod = arr.map((el) => el += 2 * mod);
+
+  return arr_mod;
+}
