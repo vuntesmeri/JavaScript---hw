@@ -1,14 +1,16 @@
 
-function isSantaClausable(obj) {
-  return (
-    typeof obj.seyHoHoHo == 'function' &&
-    typeof obj.distributeGifts == 'function' &&
-    typeof obj.goDownTheChimney == 'function'
-  );
-}
-
 //https://www.codewars.com/kata/how-new-works
 
 var myObj = {};
 myObj.__proto__ = MyObject.prototype;
 myObj.constructor();
+
+
+//http://www.codewars.com/kata/replicate-new
+
+function nouveau (Constructor) {
+    var args = [...arguments].slice(1, arguments.length);
+    const newObj = Object.create(Constructor.prototype);
+    const obj = Constructor.apply(newObj, args);
+    return (typeof optionalReturn != 'object'&& typeof optionalReturn != 'function')? newObj : obj || newObj
+}
