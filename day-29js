@@ -1,0 +1,8 @@
+
+function isSantaClausable(obj) {
+  return (
+    typeof obj.seyHoHoHo == 'function' &&
+    typeof obj.distributeGifts == 'function' &&
+    typeof obj.goDownTheChimney == 'function'
+  );
+}
