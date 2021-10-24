@@ -6,3 +6,9 @@ function isSantaClausable(obj) {
     typeof obj.goDownTheChimney == 'function'
   );
 }
+
+//https://www.codewars.com/kata/how-new-works
+
+var myObj = {};
+myObj.__proto__ = MyObject.prototype;
+myObj.constructor();
