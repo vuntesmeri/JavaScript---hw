@@ -12,5 +12,5 @@ function nouveau (Constructor) {
     var args = [...arguments].slice(1, arguments.length);
     const newObj = Object.create(Constructor.prototype);
     const obj = Constructor.apply(newObj, args);
-    return (typeof optionalReturn != 'object'&& typeof optionalReturn != 'function')? newObj : obj || newObj
+    return (typeof obj != 'object'&& typeof obj != 'function')? newObj : obj || newObj
 }
