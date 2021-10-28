@@ -1,8 +1,22 @@
-// 
+// http://www.codewars.com/kata/santaclausable-interface
 function isSantaClausable(obj) {
   return (
     typeof obj.seyHoHoHo == 'function' &&
     typeof obj.distributeGifts == 'function' &&
     typeof obj.goDownTheChimney == 'function'
   );
+}
+//http://www.codewars.com/kata/cylon-evolution
+function Cylon(model) {
+  this.model = model;
+  this.attack = function () {
+    return 'Destroy all humans!';
+  };
+}
+
+function HumanSkin(model) {
+  this.__proto__ = new Cylon(model);
+  this.infiltrate = function () {
+    return 'Infiltrate the colonies';
+  };
 }
