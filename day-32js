@@ -19,10 +19,10 @@ function NamedOne(first, last) {
       get: function () {
         return this.firstName + ' ' + this.lastName;
       },
-      set: function (newName) {
-        if (newName.split(' ').length === 2) {
-          (this.firstName = newName.split(' ')[0]),
-            (this.lastName = newName.split(' ')[1]);
+      set: function (newFullName) {
+        if (newFullName.split(' ').length === 2) {
+          (this.firstName = newFullName.split(' ')[0]),
+            (this.lastName = newFullName.split(' ')[1]);
         }
       },
     },
