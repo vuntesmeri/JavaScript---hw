@@ -1,0 +1,17 @@
+//https://www.codewars.com/kata/array-number-reduce/train/javascript
+
+Array.prototype.reduce = function (process, initial) {
+  for (elem in this) {
+    if (typeof this[elem] === 'number') {
+      if (!initial) initial = 0;
+    } else if (typeof this[elem] === 'string') {
+      if (!initial) initial = '';
+    } else if (typeof this[elem] === 'object') {
+      if (!initial) initial = {};
+    } else if (typeof this[elem] === 'array') {
+      if (!initial) initial = [];
+    }
+    initial = process(initial, this[elem]);
+  }
+  return initial;
+};
