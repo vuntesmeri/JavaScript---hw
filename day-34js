@@ -1,0 +1,23 @@
+//https://www.codewars.com/kata/basic-subclasses-adam-and-eve/
+
+class God {
+  static create() {
+    return [Adam, Eva];
+  }
+}
+
+class Human {}
+class Man extends Human {
+  constructor(woman) {
+    super();
+    this.woman = woman;
+  }
+}
+class Woman extends Human {
+  constructor(man) {
+    super();
+    this.man = man;
+  }
+}
+Eva = new Woman();
+Adam = new Man();
