@@ -1,0 +1,14 @@
+//https://www.codewars.com/kata/basics-generators-number-1/javascript
+
+function* generator() {
+  let val;
+  let n = 0;
+
+  while (true) {
+    val = yield ++n;
+
+    if (val) {
+      n = val - 1;
+    }
+  }
+}
