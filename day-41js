@@ -1,0 +1,29 @@
+//https://www.codewars.com/kata/57b06f90e298a7b53d000a86/train/javascript
+
+
+function queueTime(customers, n) {
+  let res;
+  if (n === 0 || customers.length === 0) {
+    res = 0;
+  } else if (customers.length <= n) {
+    res = Math.max(...customers);
+  } else {
+    const line = customers.splice(0, n);
+    for (let i in customers) {
+      const b = line.indexOf(Math.min(...line));
+      line[b] += Number(customers[i]);
+      res = Math.max(...line);
+    }
+  }
+  return res;
+}
+
+//https://www.codewars.com/kata/567ed5db4089538eea000010/train/javascript
+
+function launchAll(launchMissile) {
+  for(let i = 0; i < 5; i++) {
+    setTimeout(function() {
+      launchMissile(i);
+    }, i * 1000);
+  }
+}
